@@ -71,20 +71,34 @@ propriedades abaixo relacionadas:
                     WINDOW LOCATION
 
 A propriedade window.location pode ser utilizada para mostrar
-a página corrente (URL) ou para redirecionar o browser para uma
-nova página. Propriedades desta propriedade:
-    * window.location.href:
-    * window.location.hotname:
-    * window.location.pathname:
-    * window.location.protocol:
-    * window.location.port:
+a página corrente (URL - Uniform Resource Location) ou para 
+redirecionar o browser para uma nova página. Podemos listar como
+propriedades desta propriedade:
+    * window.location.href: retorna a URL da página atual.
+        Por exmeplo: https://www.w3schools.com/js/js_window.asp
+    * window.location.hostname: retorna o rótulo da página.
+        Por exemplo: www.w3schools.com
+    * window.location.pathname: retorna o path da página atual.
+        Por exemplo: /js/js_window.asp
+    * window.location.protocol: retorna o protocolo web usado.
+        Pode ser tanto 'http:' quando 'https:'.
+    * window.location.port: a propriedade foi feita para retornar
+        o valor da porta do servidor de hospedagem 80 ou 443.
+        Porém, a maioria dos navegadores não exibem a informação.
 
 A propriedade também apresenta um método:
-    * window.location.assign("<URL>"):
+    * window.location.assign("<URL>"): le um novo documento.
 
 
 
-                    WINDOW 
+                    WINDOW HISTORY
+
+A propriedade history contém todas as informações históricas
+da página. Por razões de privacidade dos dados dos usuários,
+existem limitações de como o JavaScript acessa essas informações.
+Existem dois métodos que são usáveis:
+    * window.back(): acessa o endereço gravado na posição anterior.
+    * window.forward(): acesso o endereço gravado posteriormente.
 
 
 
