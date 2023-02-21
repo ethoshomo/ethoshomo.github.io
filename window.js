@@ -32,8 +32,6 @@ Em termos de estrutura de código:
 - Funções globais: serão usadas como métodos do objeto window.
 
 
-
-
                     WINDOW SCREEN
 O tamanho da tela do aparelho em que o browser foi aberto pode 
 ser identificada pelo objeto window, usando uma propriedade
@@ -97,8 +95,6 @@ Existem dois métodos que são usáveis:
     * window.forward(): acesso o endereço gravado posteriormente.
 
 
-
-
                     WINDOW NAVIGATOR
     A propriedade navigator faz a captura de dados do navegador
 que está executando a página. Podemos citar três propriedades:
@@ -109,8 +105,6 @@ que está executando a página. Podemos citar três propriedades:
     * window.navigator.javaEnable: verifica se o java está ativo.
 - Observação: grande parte das propriedades dessa propriedade
     foram descontinuados por motivos de privacidade.
-
-
 
 
                 WINDOW POPUP BOXES
@@ -148,16 +142,15 @@ function getForward(){
     window.history.forward()
 }
 
-
 // Comandos para testar os alerts
 function getAlert(){
-    window.alert('Testando o alert!!')
+    alert('Testando o alert!!')
 }
 function getPrompt(){
-    window.prompt('Testando o prompt!!', 'Texto default...')
+    prompt('Testando o prompt!!', 'Texto default...')
 }
 function getConfirm(){
-    console.log('Retorno do Confirm:', window.confirm("Confirma ai!!"))
+    console.log('Retorno do Confirm:', confirm("Confirma ai!!"))
 }
 
 
