@@ -109,6 +109,15 @@ Existem dois métodos que são usáveis:
 // O código abaixo só funciona se executado no navegador.//
 ///////////////////////////////////////////////////////////
 
+// Os comandos de history foram colocados
+function getBack(){
+    window.history.back()
+}
+
+function getForward(){
+    window.history.forward()
+}
+
 // Abre uma nova janela com as especificações
 const newWindow = window.open('http://www.google.com', "Google", 'popup=true, console=true')
 newWindow.moveTo(300,300)
@@ -135,11 +144,3 @@ console.log('Pathname:', window.location.pathname)
 console.log('Protocol:', window.location.protocol)
 console.log('Port:', window.location.port)
 
-// Os comandos de history foram colocados
-function getBack(){
-    window.history.back()
-}
-
-function getForward(){
-    window.history.forward()
-}
