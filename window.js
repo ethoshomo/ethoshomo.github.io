@@ -1,4 +1,7 @@
-/*              OBJECT WINDOW INTERFACE
+/*         JS BROWNSER BOM (BROWNSER OBJECT MODEL)
+
+
+                    OBJECT WINDOW INTERFACE
 O objeto windows é responsável por criar uma interface que é
 suportada por todos os browsers. É interessante notar que todos
 elementos globais, tais como objetos, funções e variáveis, serão
@@ -126,6 +129,33 @@ por meio de métodos específicos:
         usuário solicitando a prestação de informações e a segunda
         o texto default do inputbox.
 
+
+                    WINDOW TIMING EVENTS
+    O objeto window permite a execução de um determinado tipo
+de código em intervalos de tempo previamente especificados.
+Existem dois métodos de HTML DOM que são usados para essa
+dinalidade:
+    * window.setTimeout(function, milliseconds): executa a função
+        depois de decorrido o intervalo de tempo indicado.
+    * window.setInterval(function, milliseconds): executa a 
+        função continuamente em intervalo de tempo regulares 
+        os quais devem ser especificados no parâmetro.
+- Observação: não podemos executar a função dentro dos métodos.
+É preciso passar a função para ser usada em callback, ou seja,
+sem os parenteses como referência.
+
+
+
+                    WINDOW COOKIES 
+Cookies são dados armazenados em pequenos arquivos de texto
+no computador do usuário. Podemos armazenar quantas informações
+quisermos. Via de regra, os cookies são deletados assim que 
+o navegador é fechado, mas é possível manipular essa informação
+por meio de parâmetros. Caso queiramos deletar algum cookie,
+basta passar uma variável com data já vencida.
+
+NÂO CRIEI COOKIES
+
 */
 
 
@@ -133,7 +163,13 @@ por meio de métodos específicos:
 // O código abaixo só funciona se executado no navegador.//
 ///////////////////////////////////////////////////////////
 
-// Os comandos de history foram colocados
+
+// History e Testes dos alerts
+
+function myFunction() {
+    alert('Hello');
+}
+
 function getBack(){
     window.history.back()
 }
@@ -142,9 +178,8 @@ function getForward(){
     window.history.forward()
 }
 
-// Comandos para testar os alerts
-function getAlert(){
-    alert('Testando o alert!!')
+function getAlert(msg = 'Testando o alert!!'){
+    alert(msg)
 }
 function getPrompt(){
     prompt('Testando o prompt!!', 'Texto default...')
@@ -185,4 +220,3 @@ console.log('CookieEnable:', window.navigator.cookieEnabled)
 console.log('LinguagemNavegador:', window.navigator.language)
 console.log('NavegadorOnline:', window.navigator.onLine)
 console.log('JavaEnable:', window.navigator.JavaEnabled)
-

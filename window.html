@@ -2,15 +2,27 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <title>Título da Página!!</title>
+    <title>Explorando o Brownser Object Model (BOM)!!</title>
 </head>
 <body>
-    <p><input type="button" value="Ir Google!" onclick="newDoc()"></p>
+    <p><h2> NAVIGATOR </h2></p>
+    <p><input type="button" value="Ir W3Schools!" onclick="newDoc()"></p>
     <p><input type="button" value="Back" onclick="getBack()"></p>
     <p><input type="button" value="Forward" onclick="getForward()"></p>
-    <p><input type="button" value="Alert" onclick="getAlert()"></p>
+    
+    <p><h2> BOXES </h2></p>
+    <p><input type="button" value="Alert" onclick="getAlert('Clicou no alert')"></p>
     <p><input type="button" value="Prompt" onclick="getPrompt()"></p>
     <p><input type="button" value="Confirm" onclick="getConfirm()"></p>
+
+    <p><h2>TIMEOUT E INTERVAL</h2></p>
+    
+    <p><input type="button" value="TimeOut" onclick="time3 = setTimeout(getAlert, 5000)"></p>
+    <p><input type="button" value="StopTimeOut" onclick="clearTimeout(time3)"></p>
+
+    <p><input type="button" value="Interval" onclick="interval4 = setInterval(getAlert, 4000)"></p>
+    <p><input type="button" value="StopInterval" onclick="clearInterval(interval4)"></p>
+
     <script src="window.js"></script>
 </body>
 </html>
