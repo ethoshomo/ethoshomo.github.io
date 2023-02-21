@@ -103,26 +103,43 @@ Existem dois métodos que são usáveis:
 
 
 */
-function newDoc(){
-    window.location.assign('https://www.w3schools.com')
-    console.log('Href:', window.location.href)
-}
 
-// Só funciona se executado no navegador.
+
+///////////////////////////////////////////////////////////
+// O código abaixo só funciona se executado no navegador.//
+///////////////////////////////////////////////////////////
+
+// Abre uma nova janela com as especificações
 const newWindow = window.open('http://www.google.com', "Google", 'popup=true, console=true')
 newWindow.moveTo(300,300)
 newWindow.resizeTo(500,500)
 newWindow.alert("Deu certo!")
 newWindow.close()
 
+// Realiza medições na tela e do objeto window.
 console.log('Screen Width:', screen.width)
 console.log('Screen Height:', screen.height)
 console.log('Screen Avail Width:', screen.availWidth)
 console.log('Screen Avail Height:', screen.availHeight)
 console.log('Screen Color Depth:', screen.colorDepth)
 console.log('Screen Pixel Depth:', screen.pixelDepth)
+
+// Trabalha com dados de localização
+function newDoc(){
+    window.location.assign('https://www.w3schools.com')
+    console.log('Href:', window.location.href)
+}
 console.log('Href:', window.location.href)
 console.log('Hostname:', window.location.hostname)
 console.log('Pathname:', window.location.pathname)
 console.log('Protocol:', window.location.protocol)
 console.log('Port:', window.location.port)
+
+// Os comandos de history foram colocados
+function getBack(){
+    window.history.back()
+}
+
+function getForward(){
+    window.history.forward()
+}
