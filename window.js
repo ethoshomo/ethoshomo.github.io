@@ -107,7 +107,7 @@ console.log('Screen Avail Width:', screen.availWidth)
 console.log('Screen Avail Height:', screen.availHeight)
 console.log('Screen Color Depth:', screen.colorDepth)
 console.log('Screen Pixel Depth:', screen.pixelDepth)
-
+console.log('Href:', window.location.href)
 console.log('Hostname:', window.location.hostname)
 console.log('Pathname:', window.location.pathname)
 console.log('Protocol:', window.location.protocol)
