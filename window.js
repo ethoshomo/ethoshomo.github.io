@@ -35,7 +35,6 @@ Em termos de estrutura de código:
 
 
                     WINDOW SCREEN
-
 O tamanho da tela do aparelho em que o browser foi aberto pode 
 ser identificada pelo objeto window, usando uma propriedade
 chamada de windo.screen. Essa propriedade tem suas próprias
@@ -55,7 +54,6 @@ propriedades:
 
 
                     WINDOW SIZE
-
 O tamanho do browser window é composto por duas propriedades
 que são medidas em pixels. É muito conveniente deixar bem claro
 que o tamanho da tela engloba apenas a área de exibição de sites.
@@ -69,7 +67,6 @@ propriedades abaixo relacionadas:
 
 
                     WINDOW LOCATION
-
 A propriedade window.location pode ser utilizada para mostrar
 a página corrente (URL - Uniform Resource Location) ou para 
 redirecionar o browser para uma nova página. Podemos listar como
@@ -92,7 +89,6 @@ A propriedade também apresenta um método:
 
 
                     WINDOW HISTORY
-
 A propriedade history contém todas as informações históricas
 da página. Por razões de privacidade dos dados dos usuários,
 existem limitações de como o JavaScript acessa essas informações.
@@ -104,7 +100,6 @@ Existem dois métodos que são usáveis:
 
 
                     WINDOW NAVIGATOR
-
     A propriedade navigator faz a captura de dados do navegador
 que está executando a página. Podemos citar três propriedades:
     * window.navigator.cookieEnable: verifica se o navegador
@@ -114,6 +109,28 @@ que está executando a página. Podemos citar três propriedades:
     * window.navigator.javaEnable: verifica se o java está ativo.
 - Observação: grande parte das propriedades dessa propriedade
     foram descontinuados por motivos de privacidade.
+
+
+
+
+                WINDOW POPUP BOXES
+    Java Script possui três tipos de popup boxes que são ativados
+por meio de métodos específicos:
+    * window.alert(): garante que a informação chegue até a atenção 
+        do usuário, pois aparece um box popup com um botão 'OK'.
+        Enquanto não se clicar em 'OK', o resto do documento não
+        irá carregar. Os textos são parametrizados em strings.
+        O método não apresenta retorno (undefined).
+    * window.confirm(): o usuário confirma ou rejeita um determinado
+        comando na forma de string. Isso acontece por meio de um 
+        box que carrega dois botões: 'OK' e 'Cancel'. O comando é 
+        passado para o método por meio de string parametrizada. O 
+        retorno do método é true (se OK) e false (se Cancel).
+    * window.prompt(): é usado para colher informações para alimentar
+        o sistema com dados fornecidos pelo usuário. São usadas duas
+        strings parametrizadas, sendo a primeira o texto exibido ao
+        usuário solicitando a prestação de informações e a segunda
+        o texto default do inputbox.
 
 */
 
@@ -130,6 +147,19 @@ function getBack(){
 function getForward(){
     window.history.forward()
 }
+
+
+// Comandos para testar os alerts
+function getAlert(){
+    window.alert('Testando o alert!!')
+}
+function getPrompt(){
+    window.prompt('Testando o prompt!!', 'Texto default...')
+}
+function getConfirm(){
+    console.log('Retorno do Confirm:', window.confirm("Confirma ai!!"))
+}
+
 
 // Abre uma nova janela com as especificações
 const newWindow = window.open('http://www.google.com', "Google", 'popup=true, console=true')
