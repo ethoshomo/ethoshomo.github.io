@@ -102,6 +102,19 @@ Existem dois métodos que são usáveis:
 
 
 
+
+                    WINDOW NAVIGATOR
+
+    A propriedade navigator faz a captura de dados do navegador
+que está executando a página. Podemos citar três propriedades:
+    * window.navigator.cookieEnable: verifica se o navegador
+        está com cookies ativados, o retorno é booleano.
+    * window.navigator.language: retorna a linguagem do browser.
+    * window.navigator.onLine: verifica se o browser está online.
+    * window.navigator.javaEnable: verifica se o java está ativo.
+- Observação: grande parte das propriedades dessa propriedade
+    foram descontinuados por motivos de privacidade.
+
 */
 
 
@@ -143,4 +156,10 @@ console.log('Hostname:', window.location.hostname)
 console.log('Pathname:', window.location.pathname)
 console.log('Protocol:', window.location.protocol)
 console.log('Port:', window.location.port)
+
+// Traz informações diversas do sistema de acesso.
+console.log('CookieEnable:', window.navigator.cookieEnabled)
+console.log('LinguagemNavegador:', window.navigator.language)
+console.log('NavegadorOnline:', window.navigator.onLine)
+console.log('JavaEnable:', window.navigator.JavaEnabled)
 
