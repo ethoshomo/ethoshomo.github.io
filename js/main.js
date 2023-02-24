@@ -7,7 +7,8 @@ function calculoIMC (){
         const altura = input_altura.value
         
         if (isNaN(peso) || isNaN(altura) || !peso || !altura){
-            resultado.innerHTML = `Valores incorretos. Tentar novamente!`
+            resultado.style.background = 'indianred'
+            resultado.innerHTML = `<center>Valores incorretos. Tentar novamente!</center>`
         }
         else{
             const IMC = Number(peso) / ((Number(altura)/100) ** 2)
@@ -23,8 +24,9 @@ function calculoIMC (){
                 avaliacao = 'em sobrepeso'
             else
                 avaliacao = 'em obesidade'
-
-            resultado.innerHTML = `Seu IMC é ${IMC.toFixed(2)}. Seu peso está ${avaliacao}.`
+            
+            resultado.style.background = 'lightskyblue'
+            resultado.innerHTML = `<center>Seu IMC é ${IMC.toFixed(2)}. Seu peso está ${avaliacao}.</center>`
         }
     }
     
